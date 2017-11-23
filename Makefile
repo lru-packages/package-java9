@@ -54,7 +54,7 @@ package: clean
 
 	# Unpack JDK
 	tar -zxf jdk-$(VERSION)-linux-x64.tar.gz -C /tmp/installdir-$(NAME)-$(VERSION)
-	cd /tmp/installdir-$(NAME)-$(VERSION) && ln -s jdk1.9.0_$(MINOR_VERSION) latest
+	cd /tmp/installdir-$(NAME)-$(VERSION) && ln -s jdk-$(MAJOR_VERSION) latest
 	cp exports /tmp/installdir-$(NAME)-$(VERSION)/exports
 	chmod -f 0644 /tmp/installdir-$(NAME)-$(VERSION)/exports
 
@@ -85,7 +85,7 @@ package: clean
 		--template-scripts \
 		--after-install after-install.sh \
 		--after-remove after-remove.sh \
-		jdk1.9.0_$(MINOR_VERSION) \
+		jdk-$(MAJOR_VERSION) \
 		latest \
 		exports \
 	;
