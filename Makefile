@@ -1,5 +1,3 @@
-http://download.oracle.com/otn-pub/java/jdk/9.0.1+11/jdk-9.0.1_linux-x64_bin.tar.gz
-
 NAME=java-1.9.0-oracle
 MAJOR_VERSION=9.0.1
 MINOR_VERSION=11
